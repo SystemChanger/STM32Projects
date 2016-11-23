@@ -34,7 +34,6 @@
 #include "stm32f0xx_hal.h"
 
 /* USER CODE BEGIN Includes */
-#define UNIT 500
 
 /* USER CODE END Includes */
 
@@ -58,27 +57,6 @@ static void MX_GPIO_Init(void);
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
-
-  void light_On()
-  {
-	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_SET);
-  }
-
-  void light_Off()
-  {
-	  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_RESET);
-  }
-
-  void light_toggle()
-  {
-  	  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_8);
-  }
-
-  void lightFor(int secs)
-  {
-	  light_On(); HAL_Delay(2*UNIT*secs); light_Off();
-  }
-
 
 int main(void)
 {

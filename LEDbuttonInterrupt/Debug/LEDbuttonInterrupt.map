@@ -517,14 +517,6 @@ Discarded input sections
  .text          0x00000000        0x0 Src\main.o
  .data          0x00000000        0x0 Src\main.o
  .bss           0x00000000        0x0 Src\main.o
- .text.light_On
-                0x00000000       0x14 Src\main.o
- .text.light_Off
-                0x00000000       0x14 Src\main.o
- .text.light_toggle
-                0x00000000       0x14 Src\main.o
- .text.lightFor
-                0x00000000       0x18 Src\main.o
  .text.Error_Handler
                 0x00000000        0x2 Src\main.o
  .text          0x00000000        0x0 Src\stm32f0xx_hal_msp.o
@@ -533,6 +525,14 @@ Discarded input sections
  .text          0x00000000        0x0 Src\stm32f0xx_it.o
  .data          0x00000000        0x0 Src\stm32f0xx_it.o
  .bss           0x00000000        0x0 Src\stm32f0xx_it.o
+ .text.light_On
+                0x00000000       0x14 Src\stm32f0xx_it.o
+ .text.light_Off
+                0x00000000       0x14 Src\stm32f0xx_it.o
+ .text.light_toggle
+                0x00000000       0x14 Src\stm32f0xx_it.o
+ .text.lightFor
+                0x00000000       0x18 Src\stm32f0xx_it.o
  .text          0x00000000        0x0 c:/program files (x86)/atollic/truestudio for arm 6.0.0/armtools/bin/../lib/gcc/arm-atollic-eabi/5.3.1/../../../../arm-atollic-eabi/lib/armv6-m\libc.a(lib_a-init.o)
  .data          0x00000000        0x0 c:/program files (x86)/atollic/truestudio for arm 6.0.0/armtools/bin/../lib/gcc/arm-atollic-eabi/5.3.1/../../../../arm-atollic-eabi/lib/armv6-m\libc.a(lib_a-init.o)
  .bss           0x00000000        0x0 c:/program files (x86)/atollic/truestudio for arm 6.0.0/armtools/bin/../lib/gcc/arm-atollic-eabi/5.3.1/../../../../arm-atollic-eabi/lib/armv6-m\libc.a(lib_a-init.o)
@@ -915,9 +915,9 @@ OUTPUT(LEDbuttonInterrupt.elf elf32-littlearm)
  .debug_line    0x000005db      0x342 Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_cortex.o
  .debug_line    0x0000091d      0x35d Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_gpio.o
  .debug_line    0x00000c7a      0x535 Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_rcc.o
- .debug_line    0x000011af      0x2b4 Src\main.o
- .debug_line    0x00001463      0x1bc Src\stm32f0xx_hal_msp.o
- .debug_line    0x0000161f      0x1fc Src\stm32f0xx_it.o
+ .debug_line    0x000011af      0x263 Src\main.o
+ .debug_line    0x00001412      0x1bc Src\stm32f0xx_hal_msp.o
+ .debug_line    0x000015ce      0x24d Src\stm32f0xx_it.o
 
 .debug_info     0x00000000     0x2d37
  .debug_info    0x00000000       0xb3 Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\gcc\startup_stm32f051x8.o
@@ -926,20 +926,20 @@ OUTPUT(LEDbuttonInterrupt.elf elf32-littlearm)
  .debug_info    0x00000898      0x7ad Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_cortex.o
  .debug_info    0x00001045      0x5e8 Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_gpio.o
  .debug_info    0x0000162d      0x99a Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_rcc.o
- .debug_info    0x00001fc7      0x805 Src\main.o
- .debug_info    0x000027cc      0x2cf Src\stm32f0xx_hal_msp.o
- .debug_info    0x00002a9b      0x29c Src\stm32f0xx_it.o
+ .debug_info    0x00001fc7      0x704 Src\main.o
+ .debug_info    0x000026cb      0x2cf Src\stm32f0xx_hal_msp.o
+ .debug_info    0x0000299a      0x39d Src\stm32f0xx_it.o
 
-.debug_abbrev   0x00000000      0xe02
+.debug_abbrev   0x00000000      0xdd0
  .debug_abbrev  0x00000000       0x12 Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\gcc\startup_stm32f051x8.o
  .debug_abbrev  0x00000012       0xf0 Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\system_stm32f0xx.o
  .debug_abbrev  0x00000102      0x206 Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal.o
  .debug_abbrev  0x00000308      0x273 Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_cortex.o
  .debug_abbrev  0x0000057b      0x1de Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_gpio.o
  .debug_abbrev  0x00000759      0x251 Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_rcc.o
- .debug_abbrev  0x000009aa      0x228 Src\main.o
- .debug_abbrev  0x00000bd2       0xfe Src\stm32f0xx_hal_msp.o
- .debug_abbrev  0x00000cd0      0x132 Src\stm32f0xx_it.o
+ .debug_abbrev  0x000009aa      0x1e7 Src\main.o
+ .debug_abbrev  0x00000b91       0xfe Src\stm32f0xx_hal_msp.o
+ .debug_abbrev  0x00000c8f      0x141 Src\stm32f0xx_it.o
 
 .debug_aranges  0x00000000      0x2d8
  .debug_aranges
@@ -955,11 +955,11 @@ OUTPUT(LEDbuttonInterrupt.elf elf32-littlearm)
  .debug_aranges
                 0x000001b8       0x80 Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_rcc.o
  .debug_aranges
-                0x00000238       0x50 Src\main.o
+                0x00000238       0x30 Src\main.o
  .debug_aranges
-                0x00000288       0x20 Src\stm32f0xx_hal_msp.o
+                0x00000268       0x20 Src\stm32f0xx_hal_msp.o
  .debug_aranges
-                0x000002a8       0x30 Src\stm32f0xx_it.o
+                0x00000288       0x50 Src\stm32f0xx_it.o
 
 .debug_ranges   0x00000000      0x3b0
  .debug_ranges  0x00000000       0x20 Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\gcc\startup_stm32f051x8.o
@@ -968,9 +968,9 @@ OUTPUT(LEDbuttonInterrupt.elf elf32-littlearm)
  .debug_ranges  0x000000c0       0xe8 Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_cortex.o
  .debug_ranges  0x000001a8       0x68 Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_gpio.o
  .debug_ranges  0x00000210       0xb0 Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_rcc.o
- .debug_ranges  0x000002c0       0x80 Src\main.o
- .debug_ranges  0x00000340       0x50 Src\stm32f0xx_hal_msp.o
- .debug_ranges  0x00000390       0x20 Src\stm32f0xx_it.o
+ .debug_ranges  0x000002c0       0x60 Src\main.o
+ .debug_ranges  0x00000320       0x50 Src\stm32f0xx_hal_msp.o
+ .debug_ranges  0x00000370       0x40 Src\stm32f0xx_it.o
 
 .debug_loc      0x00000000      0xcaf
  .debug_loc     0x00000000      0x107 Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\system_stm32f0xx.o
@@ -978,8 +978,7 @@ OUTPUT(LEDbuttonInterrupt.elf elf32-littlearm)
  .debug_loc     0x00000171      0x3da Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_cortex.o
  .debug_loc     0x0000054b      0x2c5 Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_gpio.o
  .debug_loc     0x00000810      0x455 Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_rcc.o
- .debug_loc     0x00000c65       0x2c Src\main.o
- .debug_loc     0x00000c91       0x1e Src\stm32f0xx_it.o
+ .debug_loc     0x00000c65       0x4a Src\stm32f0xx_it.o
 
 .debug_str      0x00000000      0xe00
  .debug_str     0x00000000      0x258 Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\system_stm32f0xx.o
@@ -992,12 +991,12 @@ OUTPUT(LEDbuttonInterrupt.elf elf32-littlearm)
                                 0x40f (size before relaxing)
  .debug_str     0x00000a12      0x2ee Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_rcc.o
                                 0x634 (size before relaxing)
- .debug_str     0x00000d00       0x7f Src\main.o
-                                0x6b8 (size before relaxing)
- .debug_str     0x00000d7f       0x27 Src\stm32f0xx_hal_msp.o
+ .debug_str     0x00000d00       0x51 Src\main.o
+                                0x66d (size before relaxing)
+ .debug_str     0x00000d51       0x27 Src\stm32f0xx_hal_msp.o
                                 0x3d1 (size before relaxing)
- .debug_str     0x00000da6       0x5a Src\stm32f0xx_it.o
-                                0x2b5 (size before relaxing)
+ .debug_str     0x00000d78       0x88 Src\stm32f0xx_it.o
+                                0x300 (size before relaxing)
 
 .comment        0x00000000       0x7e
  .comment       0x00000000       0x7e Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\system_stm32f0xx.o
@@ -1016,9 +1015,9 @@ OUTPUT(LEDbuttonInterrupt.elf elf32-littlearm)
  .debug_frame   0x00000180       0xe4 Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_cortex.o
  .debug_frame   0x00000264       0xc0 Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_gpio.o
  .debug_frame   0x00000324      0x12c Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_rcc.o
- .debug_frame   0x00000450       0xbc Src\main.o
- .debug_frame   0x0000050c       0x2c Src\stm32f0xx_hal_msp.o
- .debug_frame   0x00000538       0x58 Src\stm32f0xx_it.o
+ .debug_frame   0x00000450       0x5c Src\main.o
+ .debug_frame   0x000004ac       0x2c Src\stm32f0xx_hal_msp.o
+ .debug_frame   0x000004d8       0xb8 Src\stm32f0xx_it.o
  .debug_frame   0x00000590       0x2c c:/program files (x86)/atollic/truestudio for arm 6.0.0/armtools/bin/../lib/gcc/arm-atollic-eabi/5.3.1/../../../../arm-atollic-eabi/lib/armv6-m\libc.a(lib_a-init.o)
  .debug_frame   0x000005bc       0x28 c:/program files (x86)/atollic/truestudio for arm 6.0.0/armtools/bin/../lib/gcc/arm-atollic-eabi/5.3.1/../../../../arm-atollic-eabi/lib/armv6-m\libc.a(lib_a-memcpy-stub.o)
  .debug_frame   0x000005e4       0x20 c:/program files (x86)/atollic/truestudio for arm 6.0.0/armtools/bin/../lib/gcc/arm-atollic-eabi/5.3.1/armv6-m\libgcc.a(_udivsi3.o)
@@ -1064,7 +1063,7 @@ HAL_DMA_Start_IT                                  Drivers\STM32F0xx_HAL_Driver\S
                                                   Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_i2c.o
 HAL_DeInit                                        Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal.o
 HAL_Delay                                         Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal.o
-                                                  Src\main.o
+                                                  Src\stm32f0xx_it.o
 HAL_FLASHEx_Erase                                 Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_flash_ex.o
 HAL_FLASHEx_Erase_IT                              Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_flash_ex.o
 HAL_FLASHEx_OBErase                               Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_flash_ex.o
@@ -1093,7 +1092,7 @@ HAL_GPIO_LockPin                                  Drivers\STM32F0xx_HAL_Driver\S
 HAL_GPIO_ReadPin                                  Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_gpio.o
                                                   Src\stm32f0xx_it.o
 HAL_GPIO_TogglePin                                Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_gpio.o
-                                                  Src\main.o
+                                                  Src\stm32f0xx_it.o
 HAL_GPIO_WritePin                                 Drivers\STM32F0xx_HAL_Driver\Src\stm32f0xx_hal_gpio.o
                                                   Src\stm32f0xx_it.o
                                                   Src\main.o
@@ -1292,11 +1291,11 @@ _sbss                                             Drivers\CMSIS\Device\ST\STM32F
 _sdata                                            Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\gcc\startup_stm32f051x8.o
 _sidata                                           Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\gcc\startup_stm32f051x8.o
 g_pfnVectors                                      Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\gcc\startup_stm32f051x8.o
-lightFor                                          Src\main.o
+lightFor                                          Src\stm32f0xx_it.o
 lightOnButtonPressed                              Src\stm32f0xx_it.o
-light_Off                                         Src\main.o
-light_On                                          Src\main.o
-light_toggle                                      Src\main.o
+light_Off                                         Src\stm32f0xx_it.o
+light_On                                          Src\stm32f0xx_it.o
+light_toggle                                      Src\stm32f0xx_it.o
 main                                              Src\main.o
                                                   Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\gcc\startup_stm32f051x8.o
 memcpy                                            c:/program files (x86)/atollic/truestudio for arm 6.0.0/armtools/bin/../lib/gcc/arm-atollic-eabi/5.3.1/../../../../arm-atollic-eabi/lib/armv6-m\libc.a(lib_a-memcpy-stub.o)

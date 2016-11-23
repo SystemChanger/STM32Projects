@@ -25,19 +25,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  10 .debug_info   00002d37  00000000  00000000  00021847  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_abbrev 00000e02  00000000  00000000  0002457e  2**0
+ 11 .debug_abbrev 00000dd0  00000000  00000000  0002457e  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_aranges 000002d8  00000000  00000000  00025380  2**3
+ 12 .debug_aranges 000002d8  00000000  00000000  00025350  2**3
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_ranges 000003b0  00000000  00000000  00025658  2**3
+ 13 .debug_ranges 000003b0  00000000  00000000  00025628  2**3
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_loc    00000caf  00000000  00000000  00025a08  2**0
+ 14 .debug_loc    00000caf  00000000  00000000  000259d8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_str    00000e00  00000000  00000000  000266b7  2**0
+ 15 .debug_str    00000e00  00000000  00000000  00026687  2**0
                   CONTENTS, READONLY, DEBUGGING
- 16 .comment      0000007e  00000000  00000000  000274b7  2**0
+ 16 .comment      0000007e  00000000  00000000  00027487  2**0
                   CONTENTS, READONLY
- 17 .debug_frame  00000604  00000000  00000000  00027538  2**2
+ 17 .debug_frame  00000604  00000000  00000000  00027508  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -3063,9 +3063,9 @@ void SystemClock_Config(void)
  8000b72:	bd30      	pop	{r4, r5, pc}
 
 08000b74 <main>:
-	  light_On(); HAL_Delay(2*UNIT*secs); light_Off();
-  }
+/* USER CODE BEGIN 0 */
 
+/* USER CODE END 0 */
 
 int main(void)
 {
@@ -3364,16 +3364,16 @@ void SysTick_Handler(void)
  8000c42:	bd10      	pop	{r4, pc}
 
 08000c44 <lightOnButtonPressed>:
-*/
+}
 
 void lightOnButtonPressed()
   {
 	  uint8_t buttonState;
 	  buttonState = HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0);
  8000c44:	2101      	movs	r1, #1
-/**
-* @brief This function handles EXTI line 0 and 1 interrupts.
-*/
+{
+	  light_On(); HAL_Delay(2*UNIT*secs); light_Off();
+}
 
 void lightOnButtonPressed()
   {
